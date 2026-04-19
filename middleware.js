@@ -2,6 +2,7 @@ import { rewrite } from '@vercel/edge';
 
 export const config = {
   matcher: '/',
+  runtime: 'edge',
 };
 
 export default function middleware(request) {
