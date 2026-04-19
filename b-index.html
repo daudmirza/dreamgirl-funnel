@@ -540,5 +540,16 @@ footer a:hover { color: var(--gold); }
   <p><a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms</a> &nbsp;·&nbsp; <a href="mailto:hello@example.com">Contact</a></p>
 </footer>
 
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  window.va('beforeSend', (event) => {
+    const u = new URL(event.url);
+    u.pathname = '/variant-b';
+    event.url = u.toString();
+    return event;
+  });
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+  
 </body>
 </html>
