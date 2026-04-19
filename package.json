@@ -1,0 +1,8 @@
+{
+  "name": "dreamgirl-funnel",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@vercel/edge": "^1.2.1"
+  }
+}
