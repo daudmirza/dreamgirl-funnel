@@ -743,5 +743,16 @@
   document.querySelectorAll('.fade').forEach(el => obs.observe(el));
 </script>
 
+ <script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  window.va('beforeSend', (event) => {
+    const u = new URL(event.url);
+    u.pathname = '/variant-a';
+    event.url = u.toString();
+    return event;
+  });
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
 </body>
 </html>
